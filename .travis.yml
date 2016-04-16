@@ -1,0 +1,16 @@
+os:
+  #- linux
+  - osx
+
+env:
+  global:
+    - ARTIFACTS_TARGET_PATHS="artifacts/$TRAVIS_COMMIT"
+
+script:
+  - echo "test" > test.txt
+
+deploy:
+  provider: s3
+  access_key_id: $AWS_KEY
+  secret_access_key: $AWS_SECRET
+  bucket: bins/zlib
