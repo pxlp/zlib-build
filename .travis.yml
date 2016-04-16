@@ -15,4 +15,3 @@ deploy:
   secret_access_key: $AWS_SECRET
   bucket: pixelport
   region: us-west-2
-  upload-dir: bins/zlib
