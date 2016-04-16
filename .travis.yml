@@ -6,6 +6,7 @@ env:
   global:
     - ARTIFACTS_TARGET_PATHS="bin/zlib"
     - ARTIFACTS_BUCKET="pixelport"
+    - ARTIFACTS_REGION="us-west-2"
 
 install:
   - curl -sL https://raw.githubusercontent.com/travis-ci/artifacts/master/install | bash
