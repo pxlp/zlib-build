@@ -15,4 +15,4 @@ script:
   - echo "test" > test.txt
 
 after_script:
-  - artifacts upload
+  - artifacts upload test.txt
