@@ -13,5 +13,6 @@ deploy:
   provider: s3
   access_key_id: $AWS_KEY
   secret_access_key: $AWS_SECRET
-  bucket: pixelport/bins/zlib
+  bucket: pixelport
   region: us-west-2
+  upload-dir: bins/zlib
