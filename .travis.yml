@@ -4,14 +4,14 @@ os:
 
 env:
   global:
-    - ARTIFACTS_TARGET_PATHS="artifacts/$TRAVIS_COMMIT"
+    - ARTIFACTS_TARGET_PATHS="bin/zlib"
+    - ARTIFACTS_BUCKET="pixelport"
+
+install:
+  - curl -sL https://raw.githubusercontent.com/travis-ci/artifacts/master/install | bash
 
 script:
   - echo "test" > test.txt
 
-deploy:
-  provider: s3
-  access_key_id: $AWS_KEY
-  secret_access_key: $AWS_SECRET
-  bucket: pixelport
-  region: us-west-2
+after_script:
+  - artifacts upload
